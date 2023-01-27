@@ -32,6 +32,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>LUTAT.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.5\lib\net40\Guna.UI2.dll</HintPath>
@@ -97,8 +103,19 @@
     <Compile Include="Form\frmNCC.Designer.cs">
       <DependentUpon>frmNCC.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormControl\frmCTrlSanPham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControl\frmCTrlSanPham.Designer.cs">
+      <DependentUpon>frmCTrlSanPham.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\LoaiSanPham.cs" />
     <Compile Include="GUI\NhaCungCap.cs" />
+    <Compile Include="LUTATShopDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LUTATShopDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Connect\User.cs" />
@@ -123,6 +140,9 @@
     <EmbeddedResource Include="Form\frmNCC.resx">
       <DependentUpon>frmNCC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormControl\frmCTrlSanPham.resx">
+      <DependentUpon>frmCTrlSanPham.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -133,6 +153,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="LUTATShopDataSet.xsc">
+      <DependentUpon>LUTATShopDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LUTATShopDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LUTATShopDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LUTATShopDataSet.xss">
+      <DependentUpon>LUTATShopDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -147,9 +178,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="FormControl\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\icons8-high-priority-48.png" />
   </ItemGroup>
@@ -164,6 +193,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_pen_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LUTAT.ico" />
+    <None Include="Resources\istockphoto-1220443914-612x612.jpg" />
+    <None Include="Resources\icons8_add_25px.png" />
+    <None Include="Resources\icons8_xbox_cross_25px.png" />
+    <None Include="Resources\icons8_image_100px1.png" />
+    <None Include="Resources\icons8_image_100px.png" />
+    <None Include="Resources\icons8_close_window_25px.png" />
+    <None Include="Resources\icons8_cancel_25px.png" />
+    <None Include="Resources\icons8_search_25px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

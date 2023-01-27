@@ -12,7 +12,7 @@ namespace LUTATShopping
     {
 
 
-        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-450REQ4;Initial Catalog=LUTATShop;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-7U8MBTR;Initial Catalog=LUTATShop;Integrated Security=True");
 
         public DataProvider()
         {

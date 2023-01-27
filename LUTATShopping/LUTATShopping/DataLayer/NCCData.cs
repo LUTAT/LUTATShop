@@ -22,11 +22,11 @@ namespace LUTATShopping.DataLayer
             SqlCommand cmd = new SqlCommand(select + from + orderBy);
             return cls.GetID(cmd);
         }
-        public DataSet LayDSMotDong(int malsp)
+        public DataSet LayDSMotDong(int mancc)
         {
             SqlCommand cmd = new SqlCommand("select * from tb_NhaCungCap where MaNCC=@mancc");
 
-            cmd.Parameters.Add("mancc", SqlDbType.Int).Value = malsp;
+            cmd.Parameters.Add("mancc", SqlDbType.Int).Value = mancc;
 
             return cls.LayDuLieu(cmd);
         }

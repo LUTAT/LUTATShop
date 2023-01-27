@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,8 +18,37 @@ namespace LUTATShopping
         public frmAddSanPham()
         {
             InitializeComponent();
-            loaispCtrl.HienThiCbo(cbLoaiSP);
+
+            #region Hiện Button
+            if (txtMaSP.Text == "")
+            {
+                btnThem.Visible = true;
+                btnSua.Visible = false;
+                btnXoa.Visible = false;
+            }   
+            else
+            {
+                btnThem.Visible = false;
+                btnSua.Visible = true;
+                btnXoa.Visible = true;
+            }
+            #endregion
+
         }
+
+        #region Di Chuyển Form
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        #endregion
+
+        private void pnAddSP_MouseMove(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             DialogResult dlg = MessageBox.Show("Bạn có chắc chắn muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -27,23 +57,18 @@ namespace LUTATShopping
                 this.Close();
             }
         }
+
         private void btnAddLoaiSP_Click(object sender, EventArgs e)
         {
-            frmLoaiSanPham frm = new frmLoaiSanPham();
+            frmLoaiSanPham frm  = new frmLoaiSanPham();
+            this.Hide();
             frm.Show();
         }
 
-        private void picAddLoaiSP_Click(object sender, EventArgs e)
-        {
-            frmLoaiSanPham frm = new frmLoaiSanPham();
-            this.Close();
-            frm.Show();
-        }
-
-        private void picAddNCC_Click(object sender, EventArgs e)
+        private void btnAddNCC_Click(object sender, EventArgs e)
         {
             frmNCC frm = new frmNCC();
-            this.Close();
+            this.Hide();
             frm.Show();
         }
     }

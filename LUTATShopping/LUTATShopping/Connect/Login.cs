@@ -24,7 +24,7 @@ namespace LUTATShopping
             DataSet ds = cls.LayDuLieu(cmd);
             if (ds.Tables[0].Rows.Count > 0)
             {
-                user.HoTen = ds.Tables[0].Rows[0]["HoTen"].ToString();
+                user.HoTen = ds.Tables[0].Rows[0]["TenNV"].ToString();
                 user.UserName = ds.Tables[0].Rows[0]["UserName"].ToString();
                 user.SDT = ds.Tables[0].Rows[0]["SDT"].ToString();
                 user.CMND = ds.Tables[0].Rows[0]["CMND"].ToString();

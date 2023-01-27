@@ -83,6 +83,26 @@ namespace LUTATShopping.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_add_25px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_add_25px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_close_window_25px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_close_window_25px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_notification_30 {
             get {
                 object obj = ResourceManager.GetObject("icons8-notification-30", resourceCulture);
@@ -93,9 +113,39 @@ namespace LUTATShopping.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_pen_20px {
+        internal static System.Drawing.Bitmap icons8_search_25px {
             get {
-                object obj = ResourceManager.GetObject("icons8_pen_20px", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8_search_25px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_xbox_cross_25px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_xbox_cross_25px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap image_100 {
+            get {
+                object obj = ResourceManager.GetObject("image_100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap istockphoto_1220443914_612x612 {
+            get {
+                object obj = ResourceManager.GetObject("istockphoto-1220443914-612x612", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

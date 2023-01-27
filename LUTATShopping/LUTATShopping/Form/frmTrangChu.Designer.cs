@@ -322,9 +322,9 @@
             this.lbName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbName.Location = new System.Drawing.Point(39, 7);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(144, 23);
+            this.lbName.Size = new System.Drawing.Size(139, 23);
             this.lbName.TabIndex = 3;
-            this.lbName.Text = "Nguyễn Thị Thanh";
+            this.lbName.Text = "Trần Quang Thiện";
             // 
             // guna2Panel2
             // 
@@ -419,6 +419,7 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmTrangChu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,6 +22,13 @@ namespace LUTATShopping
             InitializeComponent();
             HienThiDanhSachLoaiSP();
         }
+
+        #region Di Chuyển Form
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        #endregion
 
         #region CLose
         private void btnClose_Click(object sender, EventArgs e)
@@ -88,8 +96,6 @@ namespace LUTATShopping
         }
         #endregion
 
-
-
         #region Làm Mới
         public void LamMoi()
         {
@@ -97,6 +103,10 @@ namespace LUTATShopping
             txtTenLoaiSP.Clear();
             txtGhiChu.Clear();
             txtTenLoaiSP.BorderColor = Color.FromArgb(24, 24, 24);
+            btnThem.Visible = true;
+            btnSua.Visible = false;
+            btnXoa.Visible = false;
+            btnLamMoi.Visible = false;
             HienThiDanhSachLoaiSP();
         }
         #endregion
@@ -104,6 +114,10 @@ namespace LUTATShopping
         private void dgvLoaiSP_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             HienThiThongTin();
+            btnThem.Visible = false;
+            btnSua.Visible = true;
+            btnXoa.Visible = true;
+            btnLamMoi.Visible = true;
         }
 
         private void HienThiThongTin()
@@ -145,6 +159,17 @@ namespace LUTATShopping
                     }
                 }
             }
+        }
+
+        private void pnLoaiSP_MouseMove(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            LamMoi();
         }
     }
 }

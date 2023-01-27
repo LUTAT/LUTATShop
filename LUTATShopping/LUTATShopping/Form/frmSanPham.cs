@@ -19,7 +19,7 @@ namespace LUTATShopping
             this.user = user;
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
+        private void btnAddSP_Click(object sender, EventArgs e)
         {
             frmAddSanPham frm = new frmAddSanPham();
             frm.Show();
