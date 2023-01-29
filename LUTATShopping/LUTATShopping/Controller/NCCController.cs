@@ -39,5 +39,10 @@ namespace LUTATShopping.Controller
                 return -1;
             return nccdata.Them(ncc);
         }
+
+        public int Sua(NhaCungCap ncc)
+        {
+            return nccdata.Sua(ncc);
+        }
     }
 }

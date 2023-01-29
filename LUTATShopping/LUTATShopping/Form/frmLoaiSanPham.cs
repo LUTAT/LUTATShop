@@ -105,7 +105,6 @@ namespace LUTATShopping
             txtTenLoaiSP.BorderColor = Color.FromArgb(24, 24, 24);
             btnThem.Visible = true;
             btnSua.Visible = false;
-            btnXoa.Visible = false;
             btnLamMoi.Visible = false;
             HienThiDanhSachLoaiSP();
         }
@@ -116,7 +115,6 @@ namespace LUTATShopping
             HienThiThongTin();
             btnThem.Visible = false;
             btnSua.Visible = true;
-            btnXoa.Visible = true;
             btnLamMoi.Visible = true;
         }
 

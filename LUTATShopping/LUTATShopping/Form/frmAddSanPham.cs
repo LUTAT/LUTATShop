@@ -71,5 +71,12 @@ namespace LUTATShopping
             this.Hide();
             frm.Show();
         }
+
+        private void btnAddDVT_Click(object sender, EventArgs e)
+        {
+            frmDVT frm = new frmDVT();
+            this.Hide();
+            frm.Show();
+        }
     }
 }

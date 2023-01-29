@@ -58,8 +58,10 @@
     <Compile Include="Connect\DataProvider.cs" />
     <Compile Include="Controller\LoaiSPController.cs" />
     <Compile Include="Controller\NCCController.cs" />
+    <Compile Include="Controller\TrangThaiConller.cs" />
     <Compile Include="DataLayer\LoaiSanPhamData.cs" />
     <Compile Include="DataLayer\NCCData.cs" />
+    <Compile Include="DataLayer\TrangThaiData.cs" />
     <Compile Include="Form\frmTrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,8 +111,16 @@
     <Compile Include="FormControl\frmCTrlSanPham.Designer.cs">
       <DependentUpon>frmCTrlSanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDVT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDVT.Designer.cs">
+      <DependentUpon>frmDVT.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\LoaiSanPham.cs" />
     <Compile Include="GUI\NhaCungCap.cs" />
+    <Compile Include="GUI\SanPham.cs" />
+    <Compile Include="GUI\TrangThai.cs" />
     <Compile Include="LUTATShopDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -142,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormControl\frmCTrlSanPham.resx">
       <DependentUpon>frmCTrlSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDVT.resx">
+      <DependentUpon>frmDVT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -196,6 +209,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="LUTAT.ico" />
+    <None Include="Resources\icons8_print_25px.png" />
     <None Include="Resources\istockphoto-1220443914-612x612.jpg" />
     <None Include="Resources\icons8_add_25px.png" />
     <None Include="Resources\icons8_xbox_cross_25px.png" />

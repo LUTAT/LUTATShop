@@ -37,12 +37,12 @@
             this.linkRePass = new System.Windows.Forms.LinkLabel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pnDangNhap = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txtPassWord = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUserName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnDangNhap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,23 +122,24 @@
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.Controls.Add(this.guna2PictureBox2);
+            this.guna2Panel1.Controls.Add(this.pnDangNhap);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(461, 501);
             this.guna2Panel1.TabIndex = 8;
             // 
-            // guna2PictureBox2
+            // pnDangNhap
             // 
-            this.guna2PictureBox2.Image = global::LUTATShopping.Properties.Resources.istockphoto_1220443914_612x612;
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(-69, -60);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(612, 612);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.guna2PictureBox2.TabIndex = 0;
-            this.guna2PictureBox2.TabStop = false;
+            this.pnDangNhap.Image = global::LUTATShopping.Properties.Resources.istockphoto_1220443914_612x612;
+            this.pnDangNhap.ImageRotate = 0F;
+            this.pnDangNhap.Location = new System.Drawing.Point(-69, -60);
+            this.pnDangNhap.Name = "pnDangNhap";
+            this.pnDangNhap.Size = new System.Drawing.Size(612, 612);
+            this.pnDangNhap.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pnDangNhap.TabIndex = 0;
+            this.pnDangNhap.TabStop = false;
+            this.pnDangNhap.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnDangNhap_MouseMove);
             // 
             // txtPassWord
             // 
@@ -227,9 +228,10 @@
             this.Name = "frmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDangNhap";
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frmDangNhap_MouseMove);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnDangNhap)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -248,6 +250,6 @@
         private System.Windows.Forms.LinkLabel linkRePass;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2PictureBox pnDangNhap;
     }
 }

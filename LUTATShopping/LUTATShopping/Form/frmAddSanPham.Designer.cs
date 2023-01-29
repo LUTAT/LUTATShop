@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.pnAddSP = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.btnClose = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtMaSP = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -60,14 +59,15 @@
             this.btnAddDVT = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnAddNCC = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnAddLoaiSP = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnClose = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnAddSP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSanPham)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAddKM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAddDVT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAddNCC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAddLoaiSP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.SuspendLayout();
             // 
             // pnAddSP
@@ -75,27 +75,13 @@
             this.pnAddSP.Controls.Add(this.btnClose);
             this.pnAddSP.Controls.Add(this.guna2HtmlLabel1);
             this.pnAddSP.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnAddSP.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(0)))), ((int)(((byte)(53)))));
-            this.pnAddSP.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(20)))), ((int)(((byte)(76)))));
+            this.pnAddSP.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(201)))));
+            this.pnAddSP.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(201)))));
             this.pnAddSP.Location = new System.Drawing.Point(0, 0);
             this.pnAddSP.Name = "pnAddSP";
             this.pnAddSP.Size = new System.Drawing.Size(748, 60);
             this.pnAddSP.TabIndex = 0;
             this.pnAddSP.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnAddSP_MouseMove);
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.FillColor = System.Drawing.Color.Transparent;
-            this.btnClose.Image = global::LUTATShopping.Properties.Resources.icons8_close_window_25px;
-            this.btnClose.ImageRotate = 0F;
-            this.btnClose.Location = new System.Drawing.Point(711, 12);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(25, 25);
-            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnClose.TabIndex = 1;
-            this.btnClose.TabStop = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // guna2HtmlLabel1
             // 
@@ -507,6 +493,7 @@
             this.btnAddDVT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnAddDVT.TabIndex = 28;
             this.btnAddDVT.TabStop = false;
+            this.btnAddDVT.Click += new System.EventHandler(this.btnAddDVT_Click);
             // 
             // btnAddNCC
             // 
@@ -535,6 +522,20 @@
             this.btnAddLoaiSP.TabIndex = 2;
             this.btnAddLoaiSP.TabStop = false;
             this.btnAddLoaiSP.Click += new System.EventHandler(this.btnAddLoaiSP_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.FillColor = System.Drawing.Color.Transparent;
+            this.btnClose.Image = global::LUTATShopping.Properties.Resources.icons8_close_window_25px;
+            this.btnClose.ImageRotate = 0F;
+            this.btnClose.Location = new System.Drawing.Point(711, 12);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(25, 25);
+            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnClose.TabIndex = 1;
+            this.btnClose.TabStop = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // frmAddSanPham
             // 
@@ -575,13 +576,13 @@
             this.Text = "frmAddSanPham";
             this.pnAddSP.ResumeLayout(false);
             this.pnAddSP.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             this.guna2GradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picSanPham)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAddKM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAddDVT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAddNCC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAddLoaiSP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
