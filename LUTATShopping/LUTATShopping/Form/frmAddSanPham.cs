@@ -82,5 +82,12 @@ namespace LUTATShopping
             this.Hide();
             frm.Show();
         }
+
+        private void btnAddKM_Click(object sender, EventArgs e)
+        {
+            frmKhuyenMai frm = new frmKhuyenMai();
+            this.Hide();
+            frm.Show();
+        }
     }
 }

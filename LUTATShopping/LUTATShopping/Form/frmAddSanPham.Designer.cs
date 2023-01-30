@@ -494,6 +494,7 @@
             this.btnAddKM.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnAddKM.TabIndex = 29;
             this.btnAddKM.TabStop = false;
+            this.btnAddKM.Click += new System.EventHandler(this.btnAddKM_Click);
             // 
             // btnAddDVT
             // 

@@ -38,3 +38,4 @@ C:\Users\tranq\Desktop\LUTATShop\LUTATShopping\LUTATShopping\obj\Debug\LUTATShop
 C:\Users\tranq\Desktop\LUTATShop\LUTATShopping\LUTATShopping\obj\Debug\LUTATShopping.pdb
 C:\Users\tranq\Desktop\LUTATShop\LUTATShopping\LUTATShopping\obj\Debug\LUTATShopping.frmCTrlSanPham.resources
 C:\Users\tranq\Desktop\LUTATShop\LUTATShopping\LUTATShopping\obj\Debug\LUTATShopping.frmDVT.resources
+C:\Users\tranq\Desktop\LUTATShop\LUTATShopping\LUTATShopping\obj\Debug\LUTATShopping.frmKhuyenMai.resources

@@ -61,6 +61,7 @@
     <Compile Include="Controller\NCCController.cs" />
     <Compile Include="Controller\TrangThaiConller.cs" />
     <Compile Include="DataLayer\DVTData.cs" />
+    <Compile Include="DataLayer\KhuyenMaiData.cs" />
     <Compile Include="DataLayer\LoaiSanPhamData.cs" />
     <Compile Include="DataLayer\NCCData.cs" />
     <Compile Include="DataLayer\TrangThaiData.cs" />
@@ -119,7 +120,14 @@
     <Compile Include="Form\frmDVT.Designer.cs">
       <DependentUpon>frmDVT.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\frmKhuyenMai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmKhuyenMai.Designer.cs">
+      <DependentUpon>frmKhuyenMai.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\DonViTinh.cs" />
+    <Compile Include="GUI\KhuyenMai.cs" />
     <Compile Include="GUI\LoaiSanPham.cs" />
     <Compile Include="GUI\NhaCungCap.cs" />
     <Compile Include="GUI\SanPham.cs" />
@@ -158,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\frmDVT.resx">
       <DependentUpon>frmDVT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmKhuyenMai.resx">
+      <DependentUpon>frmKhuyenMai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
