@@ -15,7 +15,7 @@ namespace LUTATShopping.Controller
 
         public void HienThiCbo(ComboBox cb)
         {
-            cb.DataSource = nccdata.LayDSNCC().Tables[0];
+            cb.DataSource = nccdata.LayDSCBNCC().Tables[0];
             cb.DisplayMember = "TenNCC";
             cb.ValueMember = "MaNCC";
         }

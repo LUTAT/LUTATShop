@@ -30,6 +30,11 @@ namespace LUTATShopping.DataLayer
 
             return cls.LayDuLieu(cmd);
         }
+        public DataSet LayDSCBNCC()
+        {
+            SqlCommand cmd = new SqlCommand("select * from tb_NhaCungCap where TrangThai = '3'");
+            return cls.LayDuLieu(cmd);
+        }
         public DataSet LayDSNCC()
         {
             SqlCommand sqlcmd = new SqlCommand("select tb_NhaCungCap.*, TenTT from tb_NhaCungCap, tb_TrangThai where tb_NhaCungCap.TrangThai = tb_TrangThai.MaTT");

@@ -15,10 +15,14 @@ namespace LUTATShopping
     public partial class frmAddSanPham : Form
     {
         LoaiSPController loaispCtrl = new LoaiSPController();
+        NCCController nccCtrl = new NCCController();
+        DVTController dvtCtrl = new DVTController();
         public frmAddSanPham()
         {
             InitializeComponent();
-
+            loaispCtrl.HienThiCbo(cbLoaiSP);
+            nccCtrl.HienThiCbo(cbNCC);
+            dvtCtrl.HienThiCbo(cbDVT);
             #region Hiện Button
             if (txtMaSP.Text == "")
             {
