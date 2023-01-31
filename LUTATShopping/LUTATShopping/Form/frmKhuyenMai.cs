@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LUTATShopping.Controller;
+using LUTATShopping.GUI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +15,15 @@ namespace LUTATShopping
 {
     public partial class frmKhuyenMai : Form
     {
+        KhuyenMaiController kmCtrl = new KhuyenMaiController();
+        TrangThaiConller ttCtrl = new TrangThaiConller();
         public frmKhuyenMai()
         {
             InitializeComponent();
+            ttCtrl.HienThiCbo3(cbTrangThai);
+            HienThiDSKM();
+            btnSua.Visible = false;
+            btnLamMoi.Visible = false;
         }
 
         #region Di Chuyển Form
@@ -55,9 +63,123 @@ namespace LUTATShopping
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
+        private void LamMoi()
+        {
+            txtMaKhuyenMai.Clear();
+            txtTenKhuyenMai.Clear();
+            txtNoiDung.Clear();
+            txtGiaGiam.Clear();
+            btnSua.Visible = false;
+            btnThem.Visible = true;
+            btnLamMoi.Visible = false;
+        }
+
+        private void HienThiDSKM()
+        {
+            kmCtrl.HienThiDGV(dgvKM);
+            dgvKM.Columns[0].HeaderText = "Mã";
+            dgvKM.Columns[0].Width = 50;
+            dgvKM.Columns[1].HeaderText = "Tên Khuyến Mãi";
+            dgvKM.Columns[1].Width = 150;
+            dgvKM.Columns[2].HeaderText = "Nội Dung";
+            dgvKM.Columns[2].Width = 200;
+            dgvKM.Columns[3].HeaderText = "Giảm Giá";
+            dgvKM.Columns[3].Width = 100;
+            dgvKM.Columns[4].Width = 0;
+            dgvKM.Columns[5].HeaderText = "Trạng Thái";
+        }    
+
+        private void HienThiThongTin()
+        {
+            if (dgvKM.CurrentRow != null)
+            {
+                txtMaKhuyenMai.Text = dgvKM.CurrentRow.Cells["MaKM"].Value.ToString();
+                txtTenKhuyenMai.Text = dgvKM.CurrentRow.Cells["TenKM"].Value.ToString();
+                txtNoiDung.Text = dgvKM.CurrentRow.Cells["NoiDung"].Value.ToString();
+                txtGiaGiam.Text = dgvKM.CurrentRow.Cells["GiamGia"].Value.ToString();
+                cbTrangThai.SelectedValue = dgvKM.CurrentRow.Cells["TrangThai"].Value.ToString();
+
+            }
+            if (Convert.ToInt32(cbTrangThai.SelectedValue) == 6)
+            {
+                cbTrangThai.BorderColor = Color.FromArgb(161, 0, 51);
+                cbTrangThai.ForeColor = Color.FromArgb(161, 0, 51);
+            }
+            else
+            {
+                cbTrangThai.BorderColor = Color.Black;
+                cbTrangThai.ForeColor = Color.Black;
+            }
+            btnSua.Visible = true;
+            btnThem.Visible = false;
+            btnLamMoi.Visible = true;
+        }
         private void btnThem_Click(object sender, EventArgs e)
         {
+            KhuyenMai km = new KhuyenMai();
+            km.MaKM = kmCtrl.GetID() + 1;
+            km.TenKM = txtTenKhuyenMai.Text;
+            km.NoiDung = txtNoiDung.Text;
+            km.GiaKM = Convert.ToInt32(txtGiaGiam.Text);
+            km.TrangThai = Convert.ToInt32(cbTrangThai.SelectedValue);
+            if (txtTenKhuyenMai.Text == "")
+            {
+                ThongBao(Color.LightPink, Color.DarkRed, "Thất Bại", "Vui lòng nhập đầy đủ thông tin", Properties.Resources.Error);
+                txtTenKhuyenMai.BorderColor = Color.FromArgb(161, 0, 51);
+            }
+            else
+            {
+                switch (kmCtrl.Them(km))
+                {
+                    case -1:
+                        ThongBao(Color.LightPink, Color.DarkRed, "Thất Bại", "Loại Sản Phẩm Đã Tồn Tại", Properties.Resources.Error);
+                        break;
+                    case 1:
+                        HienThiDSKM();
+                        ThongBao(Color.LightGray, Color.SeaGreen, "Thành Công", "Thêm Khuyến Mãi Thành Công", Properties.Resources.Success);
+                        LamMoi();
+                        break;
+                }
+            }
+        }
 
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            LamMoi();
+        }
+
+        private void dgvKM_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            HienThiThongTin();
+            txtTenKhuyenMai.Enabled = false;
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            KhuyenMai km = new KhuyenMai();
+            km.MaKM = Convert.ToInt32(txtMaKhuyenMai.Text);
+            km.NoiDung = txtNoiDung.Text;
+            km.GiaKM = Convert.ToInt32(txtGiaGiam.Text);
+            km.TrangThai = Convert.ToInt32(cbTrangThai.SelectedValue);
+            if (txtTenKhuyenMai.Text == "")
+            {
+                ThongBao(Color.LightPink, Color.DarkRed, "Thất Bại", "Vui lòng nhập đầy đủ thông tin", Properties.Resources.Error);
+                txtTenKhuyenMai.BorderColor = Color.FromArgb(161, 0, 51);
+            }
+            else
+            {
+                switch (kmCtrl.Sua(km))
+                {
+                    case -1:
+                        ThongBao(Color.LightPink, Color.DarkRed, "Thất Bại", "Khuyến Mãi Đã Tồn Tại", Properties.Resources.Error);
+                        break;
+                    case 1:
+                        HienThiDSKM();
+                        ThongBao(Color.LightGray, Color.SeaGreen, "Thành Công", "Thêm Khuyến Mãi Thành Công", Properties.Resources.Success);
+                        LamMoi();
+                        break;
+                }
+            }
         }
     }
 }

@@ -110,14 +110,6 @@ namespace LUTATShopping
         }
         #endregion
 
-        private void dgvLoaiSP_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            HienThiThongTin();
-            btnThem.Visible = false;
-            btnSua.Visible = true;
-            btnLamMoi.Visible = true;
-        }
-
         private void HienThiThongTin()
         {
             if (dgvLoaiSP.CurrentRow != null)
@@ -168,6 +160,14 @@ namespace LUTATShopping
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
             LamMoi();
+        }
+
+        private void dgvLoaiSP_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            HienThiThongTin();
+            btnThem.Visible = false;
+            btnSua.Visible = true;
+            btnLamMoi.Visible = true;
         }
     }
 }

@@ -33,14 +33,19 @@ namespace LUTATShopping.DataLayer
 
         public DataSet LayDSKM()
         {
-            SqlCommand sqlcmd = new SqlCommand("select * from tb_KhuyenMai");
+            SqlCommand sqlcmd = new SqlCommand("select tb_KhuyenMai.*, TenTT from tb_KhuyenMai, tb_TrangThai where tb_KhuyenMai.TrangThai = tb_TrangThai.MaTT");
+            return cls.LayDuLieu(sqlcmd);
+        }
+        public DataSet LayDSKMTheoTT()
+        {
+            SqlCommand sqlcmd = new SqlCommand("select * from tb_KhuyenMai where TrangThai = '5'");
             return cls.LayDuLieu(sqlcmd);
         }
 
         public int Them(KhuyenMai km)
         {
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "insert into tb_KhuyenMai (MaKM,TenKM, NoiDung, GiamGia, TrangThai) values(@makm, @tenkm, @noidung, @giamgia, @trangthai)";
+            cmd.CommandText = "insert into tb_KhuyenMai (MaKM, TenKM, NoiDung, GiamGia, TrangThai) values(@makm, @tenkm, @noidung, @giamgia, @trangthai)";
             cmd.Parameters.Add("makm", SqlDbType.Int).Value = km.MaKM;
             cmd.Parameters.Add("tenkm", SqlDbType.NVarChar).Value = km.TenKM;
             cmd.Parameters.Add("noidung", SqlDbType.NVarChar).Value = km.NoiDung;
@@ -51,7 +56,7 @@ namespace LUTATShopping.DataLayer
         public bool KiemTraTonTai(string tenkm)
         {
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "select * from tb_KhuyenMai where TenKM=@tenkm";
+            cmd.CommandText = "select * from tb_KhuyenMai where TenKM = @tenkm";
 
             cmd.Parameters.Add("tenkm", SqlDbType.NVarChar).Value = tenkm;
 
@@ -60,7 +65,7 @@ namespace LUTATShopping.DataLayer
         public int Sua(KhuyenMai km)
         {
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "update tb_KhuyenMai set NoiDung=@noidung, GiamGia=@giamgia, TrangThai=@trangthai where MaKM=@makm";
+            cmd.CommandText = "update tb_KhuyenMai set NoiDung=@noidung, GiamGia=@giamgia, TrangThai = @trangthai where MaKM = @makm";
             cmd.Parameters.Add("makm", SqlDbType.Int).Value = km.MaKM;
             cmd.Parameters.Add("noidung", SqlDbType.NVarChar).Value = km.NoiDung;
             cmd.Parameters.Add("giamgia", SqlDbType.Int).Value = km.GiaKM;

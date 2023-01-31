@@ -19,6 +19,7 @@ namespace LUTATShopping
         public frmDVT()
         {
             InitializeComponent();
+            HienThiDanhSachDVT();
         }
         #region Di Chuyển Form
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -49,8 +50,8 @@ namespace LUTATShopping
         {
             if (dgvDVT.CurrentRow != null)
             {
-                txtMaDV.Text = dgvDVT.CurrentRow.Cells["MaDVT"].Value.ToString();
-                txtTenDV.Text = dgvDVT.CurrentRow.Cells["TenDVT"].Value.ToString();
+                txtMaDV.Text = dgvDVT.CurrentRow.Cells["MaDV"].Value.ToString();
+                txtTenDV.Text = dgvDVT.CurrentRow.Cells["TenDV"].Value.ToString();
             }
         }
 
@@ -102,6 +103,16 @@ namespace LUTATShopping
                         break;
                 }
             }
+        }
+
+        private void dgvDVT_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            HienThiThongTin();
+        }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            LamMoi();
         }
     }
 }

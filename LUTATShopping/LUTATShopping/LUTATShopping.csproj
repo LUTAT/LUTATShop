@@ -57,6 +57,7 @@
   <ItemGroup>
     <Compile Include="Connect\DataProvider.cs" />
     <Compile Include="Controller\DVTController.cs" />
+    <Compile Include="Controller\KhuyenMaiController.cs" />
     <Compile Include="Controller\LoaiSPController.cs" />
     <Compile Include="Controller\NCCController.cs" />
     <Compile Include="Controller\TrangThaiConller.cs" />

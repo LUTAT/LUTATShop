@@ -481,6 +481,7 @@
             this.picSanPham.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picSanPham.TabIndex = 0;
             this.picSanPham.TabStop = false;
+            this.picSanPham.Click += new System.EventHandler(this.picSanPham_Click);
             // 
             // btnAddKM
             // 

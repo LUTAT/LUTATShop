@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -17,12 +19,14 @@ namespace LUTATShopping
         LoaiSPController loaispCtrl = new LoaiSPController();
         NCCController nccCtrl = new NCCController();
         DVTController dvtCtrl = new DVTController();
+        KhuyenMaiController kmCtrl = new KhuyenMaiController();
         public frmAddSanPham()
         {
             InitializeComponent();
             loaispCtrl.HienThiCbo(cbLoaiSP);
             nccCtrl.HienThiCbo(cbNCC);
             dvtCtrl.HienThiCbo(cbDVT);
+            kmCtrl.HienThiCbo(cbKM);
             #region Hiện Button
             if (txtMaSP.Text == "")
             {
@@ -88,6 +92,26 @@ namespace LUTATShopping
             frmKhuyenMai frm = new frmKhuyenMai();
             this.Hide();
             frm.Show();
+        }
+
+        private void picSanPham_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog
+            {
+                Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png"
+            };
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                picSanPham.Image = Image.FromFile(open.FileName);
+            }
+        }
+        byte[] ConvertImageToBytes(Image img)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                img.Save(ms, ImageFormat.Png);
+                return ms.ToArray();
+            }
         }
     }
 }

@@ -11,12 +11,24 @@ namespace LUTATShopping.Controller
     internal class TrangThaiConller
     {
         TrangThaiData TTData = new TrangThaiData();
-        public void HienThiCbo(ComboBox cb)
+        public void HienThiCbo2(ComboBox cb)
         {
-            cb.DataSource = TTData.LayDSTrangThai().Tables[0];
+            cb.DataSource = TTData.LayDSTrangThai2().Tables[0];
+            cb.DisplayMember = "TenTT";
+            cb.ValueMember = "MaTT";
+        }
+        public void HienThiCbo1(ComboBox cb)
+        {
+            cb.DataSource = TTData.LayDSTrangThai1().Tables[0];
             cb.DisplayMember = "TenTT";
             cb.ValueMember = "MaTT";
         }
 
+        public void HienThiCbo3(ComboBox cb)
+        {
+            cb.DataSource = TTData.LayDSTrangThai3().Tables[0];
+            cb.DisplayMember = "TenTT";
+            cb.ValueMember = "MaTT";
+        }
     }
 }

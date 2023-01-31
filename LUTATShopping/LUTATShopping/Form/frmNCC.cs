@@ -22,7 +22,7 @@ namespace LUTATShopping
         {
             InitializeComponent();
             HienThiDSNCC();
-            TTCtrl.HienThiCbo(cbTrangThai);
+            TTCtrl.HienThiCbo2(cbTrangThai);
         }
 
         #region di chuyển form
