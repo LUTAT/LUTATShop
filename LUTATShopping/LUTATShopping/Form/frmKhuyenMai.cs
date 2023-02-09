@@ -65,6 +65,7 @@ namespace LUTATShopping
 
         private void LamMoi()
         {
+            txtTenKhuyenMai.Enabled = true;
             txtMaKhuyenMai.Clear();
             txtTenKhuyenMai.Clear();
             txtNoiDung.Clear();
@@ -168,17 +169,10 @@ namespace LUTATShopping
             }
             else
             {
-                switch (kmCtrl.Sua(km))
-                {
-                    case -1:
-                        ThongBao(Color.LightPink, Color.DarkRed, "Thất Bại", "Khuyến Mãi Đã Tồn Tại", Properties.Resources.Error);
-                        break;
-                    case 1:
-                        HienThiDSKM();
-                        ThongBao(Color.LightGray, Color.SeaGreen, "Thành Công", "Thêm Khuyến Mãi Thành Công", Properties.Resources.Success);
-                        LamMoi();
-                        break;
-                }
+                kmCtrl.Sua(km);
+                HienThiDSKM();
+                ThongBao(Color.LightGray, Color.SeaGreen, "Thành Công", "Thêm Khuyến Mãi Thành Công", Properties.Resources.Success);
+                LamMoi();
             }
         }
     }

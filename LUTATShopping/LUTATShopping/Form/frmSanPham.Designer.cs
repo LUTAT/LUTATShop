@@ -29,9 +29,11 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddSP = new Guna.UI2.WinForms.Guna2Button();
             this.txtTrangThai = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtNCC = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -40,7 +42,7 @@
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnShow = new System.Windows.Forms.FlowLayoutPanel();
             this.frmCTrlSanPham1 = new LUTATShopping.frmCTrlSanPham();
             this.frmCTrlSanPham2 = new LUTATShopping.frmCTrlSanPham();
             this.frmCTrlSanPham3 = new LUTATShopping.frmCTrlSanPham();
@@ -69,11 +71,9 @@
             this.frmCTrlSanPham26 = new LUTATShopping.frmCTrlSanPham();
             this.frmCTrlSanPham27 = new LUTATShopping.frmCTrlSanPham();
             this.frmCTrlSanPham28 = new LUTATShopping.frmCTrlSanPham();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.pnShow.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -90,6 +90,24 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1120, 55);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BorderRadius = 15;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Image = global::LUTATShopping.Properties.Resources.icons8_print_25px;
+            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button1.Location = new System.Drawing.Point(843, 12);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(130, 36);
+            this.guna2Button1.TabIndex = 4;
+            this.guna2Button1.Text = "In Barcode";
+            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnAddSP
             // 
@@ -140,6 +158,32 @@
             this.txtNCC.Name = "txtNCC";
             this.txtNCC.Size = new System.Drawing.Size(173, 36);
             this.txtNCC.TabIndex = 1;
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.BorderColor = System.Drawing.Color.Black;
+            this.txtTimKiem.BorderRadius = 15;
+            this.txtTimKiem.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTimKiem.DefaultText = "";
+            this.txtTimKiem.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTimKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTimKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTimKiem.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTimKiem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTimKiem.ForeColor = System.Drawing.Color.Black;
+            this.txtTimKiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTimKiem.IconLeft = global::LUTATShopping.Properties.Resources.icons8_search_25px;
+            this.txtTimKiem.IconLeftSize = new System.Drawing.Size(25, 25);
+            this.txtTimKiem.Location = new System.Drawing.Point(12, 12);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.PasswordChar = '\0';
+            this.txtTimKiem.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtTimKiem.PlaceholderText = "Tìm Kiếm";
+            this.txtTimKiem.SelectedText = "";
+            this.txtTimKiem.Size = new System.Drawing.Size(309, 36);
+            this.txtTimKiem.TabIndex = 0;
+            this.txtTimKiem.TextOffset = new System.Drawing.Point(5, 0);
             // 
             // guna2GradientPanel1
             // 
@@ -234,42 +278,42 @@
             this.guna2HtmlLabel2.TabIndex = 1;
             this.guna2HtmlLabel2.Text = "Mã Sản Phẩm";
             // 
-            // flowLayoutPanel1
+            // pnShow
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(20)))), ((int)(((byte)(76)))));
-            this.flowLayoutPanel1.Controls.Add(this.frmCTrlSanPham1);
-            this.flowLayoutPanel1.Controls.Add(this.frmCTrlSanPham2);
-            this.flowLayoutPanel1.Controls.Add(this.frmCTrlSanPham3);
-            this.flowLayoutPanel1.Controls.Add(this.frmCTrlSanPham4);
-            this.flowLayoutPanel1.Controls.Add(this.frmCTrlSanPham5);
-            this.flowLayoutPanel1.Controls.Add(this.frmCTrlSanPham6);
-            this.flowLayoutPanel1.Controls.Add(this.frmCTrlSanPham7);
-            this.flowLayoutPanel1.Controls.Add(this.frmCTrlSanPham8);
-            this.flowLayoutPanel1.Controls.Add(this.frmCTrlSanPham9);
-            this.flowLayoutPanel1.Controls.Add(this.frmCTrlSanPham10);
-            this.flowLayoutPanel1.Controls.Add(this.frmCTrlSanPham11);
-            this.flowLayoutPanel1.Controls.Add(this.frmCTrlSanPham12);
-            this.flowLayoutPanel1.Controls.Add(this.frmCTrlSanPham13);
-            this.flowLayoutPanel1.Controls.Add(this.frmCTrlSanPham14);
-            this.flowLayoutPanel1.Controls.Add(this.frmCTrlSanPham15);
-            this.flowLayoutPanel1.Controls.Add(this.frmCTrlSanPham16);
-            this.flowLayoutPanel1.Controls.Add(this.frmCTrlSanPham17);
-            this.flowLayoutPanel1.Controls.Add(this.frmCTrlSanPham18);
-            this.flowLayoutPanel1.Controls.Add(this.frmCTrlSanPham19);
-            this.flowLayoutPanel1.Controls.Add(this.frmCTrlSanPham20);
-            this.flowLayoutPanel1.Controls.Add(this.frmCTrlSanPham21);
-            this.flowLayoutPanel1.Controls.Add(this.frmCTrlSanPham22);
-            this.flowLayoutPanel1.Controls.Add(this.frmCTrlSanPham23);
-            this.flowLayoutPanel1.Controls.Add(this.frmCTrlSanPham24);
-            this.flowLayoutPanel1.Controls.Add(this.frmCTrlSanPham25);
-            this.flowLayoutPanel1.Controls.Add(this.frmCTrlSanPham26);
-            this.flowLayoutPanel1.Controls.Add(this.frmCTrlSanPham27);
-            this.flowLayoutPanel1.Controls.Add(this.frmCTrlSanPham28);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 106);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1096, 545);
-            this.flowLayoutPanel1.TabIndex = 2;
+            this.pnShow.AutoScroll = true;
+            this.pnShow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(20)))), ((int)(((byte)(76)))));
+            this.pnShow.Controls.Add(this.frmCTrlSanPham1);
+            this.pnShow.Controls.Add(this.frmCTrlSanPham2);
+            this.pnShow.Controls.Add(this.frmCTrlSanPham3);
+            this.pnShow.Controls.Add(this.frmCTrlSanPham4);
+            this.pnShow.Controls.Add(this.frmCTrlSanPham5);
+            this.pnShow.Controls.Add(this.frmCTrlSanPham6);
+            this.pnShow.Controls.Add(this.frmCTrlSanPham7);
+            this.pnShow.Controls.Add(this.frmCTrlSanPham8);
+            this.pnShow.Controls.Add(this.frmCTrlSanPham9);
+            this.pnShow.Controls.Add(this.frmCTrlSanPham10);
+            this.pnShow.Controls.Add(this.frmCTrlSanPham11);
+            this.pnShow.Controls.Add(this.frmCTrlSanPham12);
+            this.pnShow.Controls.Add(this.frmCTrlSanPham13);
+            this.pnShow.Controls.Add(this.frmCTrlSanPham14);
+            this.pnShow.Controls.Add(this.frmCTrlSanPham15);
+            this.pnShow.Controls.Add(this.frmCTrlSanPham16);
+            this.pnShow.Controls.Add(this.frmCTrlSanPham17);
+            this.pnShow.Controls.Add(this.frmCTrlSanPham18);
+            this.pnShow.Controls.Add(this.frmCTrlSanPham19);
+            this.pnShow.Controls.Add(this.frmCTrlSanPham20);
+            this.pnShow.Controls.Add(this.frmCTrlSanPham21);
+            this.pnShow.Controls.Add(this.frmCTrlSanPham22);
+            this.pnShow.Controls.Add(this.frmCTrlSanPham23);
+            this.pnShow.Controls.Add(this.frmCTrlSanPham24);
+            this.pnShow.Controls.Add(this.frmCTrlSanPham25);
+            this.pnShow.Controls.Add(this.frmCTrlSanPham26);
+            this.pnShow.Controls.Add(this.frmCTrlSanPham27);
+            this.pnShow.Controls.Add(this.frmCTrlSanPham28);
+            this.pnShow.Location = new System.Drawing.Point(12, 106);
+            this.pnShow.Name = "pnShow";
+            this.pnShow.Size = new System.Drawing.Size(1096, 545);
+            this.pnShow.TabIndex = 2;
             // 
             // frmCTrlSanPham1
             // 
@@ -495,57 +539,13 @@
             this.frmCTrlSanPham28.Size = new System.Drawing.Size(1070, 45);
             this.frmCTrlSanPham28.TabIndex = 27;
             // 
-            // guna2Button1
-            // 
-            this.guna2Button1.BorderRadius = 15;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Image = global::LUTATShopping.Properties.Resources.icons8_print_25px;
-            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.Location = new System.Drawing.Point(843, 12);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(130, 36);
-            this.guna2Button1.TabIndex = 4;
-            this.guna2Button1.Text = "In Barcode";
-            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtTimKiem
-            // 
-            this.txtTimKiem.BorderColor = System.Drawing.Color.Black;
-            this.txtTimKiem.BorderRadius = 15;
-            this.txtTimKiem.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTimKiem.DefaultText = "";
-            this.txtTimKiem.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTimKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTimKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTimKiem.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTimKiem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtTimKiem.ForeColor = System.Drawing.Color.Black;
-            this.txtTimKiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTimKiem.IconLeft = global::LUTATShopping.Properties.Resources.icons8_search_25px;
-            this.txtTimKiem.IconLeftSize = new System.Drawing.Size(25, 25);
-            this.txtTimKiem.Location = new System.Drawing.Point(12, 12);
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.PasswordChar = '\0';
-            this.txtTimKiem.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTimKiem.PlaceholderText = "Tìm Kiếm";
-            this.txtTimKiem.SelectedText = "";
-            this.txtTimKiem.Size = new System.Drawing.Size(309, 36);
-            this.txtTimKiem.TabIndex = 0;
-            this.txtTimKiem.TextOffset = new System.Drawing.Point(5, 0);
-            // 
             // frmSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1120, 663);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.pnShow);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -554,7 +554,7 @@
             this.guna2Panel1.ResumeLayout(false);
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.pnShow.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -567,7 +567,7 @@
         private Guna.UI2.WinForms.Guna2ComboBox txtTrangThai;
         private Guna.UI2.WinForms.Guna2ComboBox txtNCC;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel pnShow;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;

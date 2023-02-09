@@ -10,7 +10,7 @@ namespace LUTATShopping.GUI
     internal class SanPham
     {
 
-        private int maSP;
+        private string maSP;
         private string tenSP;
         private int soLuong;
         private int giaBan;
@@ -20,9 +20,9 @@ namespace LUTATShopping.GUI
         private int maKM;
         private DateTime ngaySX;
         private DateTime ngayHH;
-        private Image anhSP;
+        private Byte[] anhSP;
 
-        public int MaSP { get => maSP; set => maSP = value; }
+        public string MaSP { get => maSP; set => maSP = value; }
         public string TenSP { get => tenSP; set => tenSP = value; }
         public int SoLuong { get => soLuong; set => soLuong = value; }
         public int GiaBan { get => giaBan; set => giaBan = value; }
@@ -32,6 +32,6 @@ namespace LUTATShopping.GUI
         public int MaKM { get => maKM; set => maKM = value; }
         public DateTime NgaySX { get => ngaySX; set => ngaySX = value; }
         public DateTime NgayHH { get => ngayHH; set => ngayHH = value; }
-        public Image AnhSP { get => anhSP; set => anhSP = value; }
+        public Byte[] AnhSP { get => anhSP; set => anhSP = value; }
     }
 }

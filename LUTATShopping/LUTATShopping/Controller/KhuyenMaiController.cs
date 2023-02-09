@@ -44,8 +44,6 @@ namespace LUTATShopping.Controller
 
         public int Sua(KhuyenMai km)
         {
-            if (KiemTraTonTai(km.TenKM))
-                return -1;
             return KMData.Sua(km);
         }
     }

@@ -34,6 +34,7 @@ namespace LUTATShopping.Controller
             dgv.DataSource = loaispdata.LayDSLoaiSP().Tables[0];
         }
 
+
         #region Chức Năng Thêm Loại Sản Phẩm
         public bool KiemTraTonTai(string tenloaisp)
         {

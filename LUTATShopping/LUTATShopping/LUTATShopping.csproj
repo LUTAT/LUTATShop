@@ -60,11 +60,13 @@
     <Compile Include="Controller\KhuyenMaiController.cs" />
     <Compile Include="Controller\LoaiSPController.cs" />
     <Compile Include="Controller\NCCController.cs" />
+    <Compile Include="Controller\SanPhamController.cs" />
     <Compile Include="Controller\TrangThaiConller.cs" />
     <Compile Include="DataLayer\DVTData.cs" />
     <Compile Include="DataLayer\KhuyenMaiData.cs" />
     <Compile Include="DataLayer\LoaiSanPhamData.cs" />
     <Compile Include="DataLayer\NCCData.cs" />
+    <Compile Include="DataLayer\SanPhamData.cs" />
     <Compile Include="DataLayer\TrangThaiData.cs" />
     <Compile Include="Form\frmTrangChu.cs">
       <SubType>Form</SubType>

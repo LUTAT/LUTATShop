@@ -418,6 +418,7 @@
             this.btnThem.Size = new System.Drawing.Size(138, 45);
             this.btnThem.TabIndex = 26;
             this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // guna2GradientPanel1
             // 
